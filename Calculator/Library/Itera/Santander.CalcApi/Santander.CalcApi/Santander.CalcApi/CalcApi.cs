@@ -29,6 +29,12 @@ namespace Santander.CalcApi
             }            
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
         public double Subtract(double x, double y)
         {
             double result;

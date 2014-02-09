@@ -52,8 +52,10 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>
-    </PostBuildEvent>
+    <PostBuildEvent>echo "Copy .dll to reference folder and .pdb to bin folder
+REM cvcv copy dll to solution references folder
+if exist "$(ProjectDir)..\..\..\..\References" xcopy /d /y  "$(TargetDir)$(TargetName).dll" "$(ProjectDir)..\..\..\..\References"
+if exist "$(ProjectDir)..\..\..\..\References" xcopy /d /y  "$(TargetDir)$(TargetName).pdb" "$(ProjectDir)..\..\..\..\References"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
