@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
+using MyCalcApi = Santander.CalcApi.CalcApi;
 
 namespace Santander.CalcApi.Test
 {
@@ -14,7 +15,7 @@ namespace Santander.CalcApi.Test
         public void AddTwoNumbers_ShouldReturnSum()
         {
             // Arrange
-            var calcApi = new CalcApi();
+            var calcApi = new MyCalcApi();
             var x = 1;
             var y = 2;
             
@@ -29,7 +30,7 @@ namespace Santander.CalcApi.Test
         public void SubractTwoNumbers_ShouldReturnDifference()
         {
             // Arrange
-            var calcApi = new CalcApi();
+            var calcApi = new MyCalcApi();
             var x = 3;
             var y = 2;
 
@@ -44,7 +45,7 @@ namespace Santander.CalcApi.Test
         public void DivideTwoNumbers_ShouldReturnQoutient()
         {
             // Arrange
-            var calcApi = new CalcApi();
+            var calcApi = new MyCalcApi();
             double x = 3;
             double y = 2;
 
@@ -59,7 +60,7 @@ namespace Santander.CalcApi.Test
         public void DivideTwoNumbers_ShouldReturnException_GivenZeroDivisor()
         {
             // Arrange
-            var calcApi = new CalcApi();
+            var calcApi = new MyCalcApi();
             var x = 3;
             var y = 0;
 
@@ -81,7 +82,7 @@ namespace Santander.CalcApi.Test
         public void MultiplyTwoNumbers_ShouldReturnProduct()
         {
             // Arrange
-            var calcApi = new CalcApi();
+            var calcApi = new MyCalcApi();
             double x = 3;
             double y = 2;
 
