@@ -8,7 +8,12 @@ namespace Santander.CalcApi
 {
     public class CalcApi : ICalcApi
     {
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
         public double Add(double x, double y)
         {
             double result;
@@ -16,6 +21,7 @@ namespace Santander.CalcApi
             {
                 result = x + y;
                 return result;
+                
             }
             catch (Exception ex)
             {                    
