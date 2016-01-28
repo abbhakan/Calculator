@@ -1,0 +1,27 @@
+﻿@using Santander.MvcCalc.Extensions
+@model Santander.MvcCalc.Models.CalcViewModel
+
+@{
+    ViewBag.Title = "Exec";
+}
+
+<h2>Exec</h2>
+
+<div>
+    <h4>CalcViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Result)
+        </dt>
+
+        <dd>
+            @Html.DisplayWithIdFor(model => model.Result)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
