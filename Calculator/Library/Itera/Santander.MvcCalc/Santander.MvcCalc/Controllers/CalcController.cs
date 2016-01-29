@@ -15,7 +15,7 @@ namespace Santander.MvcCalc.Controllers
     {
         public ActionResult Exec(double numA, double numB, string mathOp)
         {
-            string a = "";
+            
             double res = 0;
             try
             {
