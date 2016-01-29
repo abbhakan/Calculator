@@ -14,8 +14,7 @@ namespace Santander.MvcCalc.Controllers
     public class CalcController : Controller
     {
         public ActionResult Exec(double numA, double numB, string mathOp)
-        {
-            var a = "";   
+        {            
             double res = 0;
             try
             {
