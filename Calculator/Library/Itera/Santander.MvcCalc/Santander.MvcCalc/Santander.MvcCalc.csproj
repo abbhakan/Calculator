@@ -258,15 +258,15 @@
     <None Include="Web.Development.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <None Include="Web.Prod.config">
+    <Content Include="Web.Prod.config">
       <DependentUpon>Web.config</DependentUpon>
-    </None>
+    </Content>
     <None Include="Web.Production.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <None Include="Web.Test.config">
+    <Content Include="Web.Test.config">
       <DependentUpon>Web.config</DependentUpon>
-    </None>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
