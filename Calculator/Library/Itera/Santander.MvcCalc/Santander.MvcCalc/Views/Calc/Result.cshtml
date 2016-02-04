@@ -1,0 +1,52 @@
+﻿@using Santander.MvcCalc.Extensions
+@model Santander.MvcCalc.Models.CalcViewModel
+
+@{
+    ViewBag.Title = "Result";
+}
+
+<h2>Result</h2>
+
+<div>
+    <h4>Result</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NumA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MathOp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MathOp)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Result)
+        </dt>
+
+        <dd>
+            @Html.DisplayWithIdFor(model => model.Result)            
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

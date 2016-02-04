@@ -3,24 +3,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.UI.WebControls;
 using Santander.CalcApi;
 using Santander.MvcCalc.Models;
 
 namespace Santander.MvcCalc.Controllers
-{
+{    
+
     public class CalcController : Controller
     {
-        public ActionResult Exec(double numA, double numB, string mathOp)
+        [HttpGet]
+        public ActionResult Index()
+        {            
+            return View(new CalcViewModel());
+        }
+
+        [HttpPost]        
+        public ActionResult Index(CalcViewModel calcViewModel)
         {            
             double res = 0;
             try
             {
                 var _calcApi = new CalcApi.CalcApi();
+                var numA = calcViewModel.NumA;
+                var numB = calcViewModel.NumB;
 
-                switch (mathOp)
+                switch (calcViewModel.MathOp.ToString())
                 {
                     case "Add":
                         res = _calcApi.Add(numA, numB);
@@ -45,10 +54,8 @@ namespace Santander.MvcCalc.Controllers
                 throw ex;
             }
 
-            var calcViewModel = new CalcViewModel();
             calcViewModel.Result = res;
-
-            return View(calcViewModel);
+            return View("Result", calcViewModel);
         }
 
         

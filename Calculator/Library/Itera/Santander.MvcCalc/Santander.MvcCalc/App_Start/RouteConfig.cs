@@ -19,11 +19,11 @@ namespace Santander.MvcCalc
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
 
-            routes.MapRoute(
-                name: "Execute",
-                url: "{controller}/{action}/{numA}/{numB}/{mathOp}",
-                defaults: new { controller = "Calc", action = "Execute" }                
-            );
+            //routes.MapRoute(
+            //    name: "Execute",
+            //    url: "{controller}/{action}/{numA}/{numB}/{mathOp}",
+            //    defaults: new { controller = "Calc", action = "Execute" }                
+            //);
         }
     }
 }
