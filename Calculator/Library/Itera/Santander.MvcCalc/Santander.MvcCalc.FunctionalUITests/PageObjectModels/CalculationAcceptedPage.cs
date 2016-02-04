@@ -10,11 +10,11 @@ namespace Santander.MvcCalc.FunctionalUITests.PageObjectModels
 {
     public class CalculationAcceptedPage : Page
     {
-        public double CalcAcceptedResult
+        public string CalcAcceptedResult
         {
             get
             {
-                return Convert.ToDouble(Find.Element(By.Id("Result")).Text);
+                return Find.Element(By.Id("Result")).GetAttribute("innerHTML");
             }
         }
     }

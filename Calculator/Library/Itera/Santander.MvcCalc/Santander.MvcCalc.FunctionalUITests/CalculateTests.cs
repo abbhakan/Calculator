@@ -10,11 +10,9 @@ using NUnit.Framework;
 using Santander.MvcCalc.Extensions;
 
 namespace Santander.MvcCalc.FunctionalUITests
-{
-    [TestFixture]
+{    
     class CalculateTests
-    {
-        [Test]
+    {        
         public void ValidInputShouldGiveResult()
         {
             // Arrange            
@@ -32,7 +30,7 @@ namespace Santander.MvcCalc.FunctionalUITests
 
             // Assert
             var calcSuccessfulResult = acceptPage.CalcAcceptedResult;
-            Assert.That(calcSuccessfulResult.Equals(calcDetails.Result));
+            Assert.That(calcSuccessfulResult.Equals(calcDetails.Result.ToString()));
         }
     }
 }
