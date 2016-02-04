@@ -14,7 +14,7 @@ namespace Santander.MvcCalc.FunctionalUITests.PageObjectModels
         public T Calculate<T>(CalcViewModel calculationViewModel) where T : UiComponent, new()
         {
             Input.Model(calculationViewModel);
-            return Navigate.To<T>(By.ClassName("btn btn-primary"));
+            return Navigate.To<T>(By.Id("submit"));
         }
     }
 }
