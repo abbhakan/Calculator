@@ -79,5 +79,20 @@ namespace Santander.CalcApi
             }
 
         }
+
+        public double Modulo(double x, double y)
+        {
+            double result;
+            try
+            {
+                result = x % y;
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+
+        }
     }
 }
