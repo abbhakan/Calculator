@@ -21,7 +21,8 @@ namespace Santander.MvcCalc.Controllers
 
         [HttpPost]        
         public ActionResult Index(CalcViewModel calcViewModel)
-        {            
+        {
+            var a = "a";   
             double res = 0;
             try
             {
