@@ -43,6 +43,9 @@ namespace Santander.MvcCalc.Controllers
                     case "Mult":
                         res = _calcApi.Multiply(numA, numB);
                         break;
+                    case "Mod":
+                        res = _calcApi.Modulo(numA, numB);
+                        break;
                     default:
                         res = 0.0;
                         break;

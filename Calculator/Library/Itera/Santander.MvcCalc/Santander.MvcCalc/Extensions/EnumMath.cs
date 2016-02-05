@@ -15,7 +15,9 @@ namespace Santander.MvcCalc.Extensions
         [Display(Name = "Mult")]
         Mult,
         [Display(Name = "Div")]
-        Div
-        
+        Div,
+        [Display(Name = "Mod")]
+        Mod
+
     }
 }
