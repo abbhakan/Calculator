@@ -12,7 +12,7 @@ namespace Santander.CalcService
     {
         private Timer _timer = null;
         private readonly ILog _log = LogManager.GetLogger(typeof (CalcService));
-        private string a = "a";
+        private string a = "b";
 
         public CalcService()
         {
