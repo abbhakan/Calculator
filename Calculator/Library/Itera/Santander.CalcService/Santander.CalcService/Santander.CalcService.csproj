@@ -76,9 +76,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="App.Prod.config" />
-    <None Include="App.Test.config" />
+    <Content Include="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Santander.CalcService.exe.Prod.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>App.Config</DependentUpon>
+    </Content>
+    <Content Include="Santander.CalcService.exe.Test.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>App.Config</DependentUpon>
+    </Content>
     <None Include="log4net.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
