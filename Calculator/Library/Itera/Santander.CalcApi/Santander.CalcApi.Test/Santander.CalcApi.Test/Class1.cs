@@ -92,6 +92,21 @@ namespace Santander.CalcApi.Test
             // Assert
             Assert.AreEqual(x * y, result);
         }
-        
+
+        [Test]
+        public void ModuloTwoNumbers_ShouldReturnRest()
+        {
+            // Arrange
+            var calcApi = new MyCalcApi();
+            double x = 9;
+            double y = 6;
+
+            // Act
+            var result = calcApi.Modulo(x, y);
+
+            // Assert
+            Assert.AreEqual(3, result);
+        }
+
     }
 }

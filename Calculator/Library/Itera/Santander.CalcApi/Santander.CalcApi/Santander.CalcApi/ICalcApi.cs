@@ -12,5 +12,6 @@ namespace Santander.CalcApi
         double Subtract(double x, double y);
         double Divide(double x, double y);
         double Multiply(double x, double y);
+        double Modulo(double x, double y);
     }
 }

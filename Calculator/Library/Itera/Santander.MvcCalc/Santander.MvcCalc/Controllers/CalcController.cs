@@ -21,7 +21,8 @@ namespace Santander.MvcCalc.Controllers
 
         [HttpPost]        
         public ActionResult Index(CalcViewModel calcViewModel)
-        {            
+        {
+            var a = "h";   
             double res = 0;
             try
             {
@@ -42,6 +43,9 @@ namespace Santander.MvcCalc.Controllers
                         break;
                     case "Mult":
                         res = _calcApi.Multiply(numA, numB);
+                        break;
+                    case "Mod":
+                        res = _calcApi.Modulo(numA, numB);
                         break;
                     default:
                         res = 0.0;
