@@ -22,7 +22,11 @@ namespace Santander.MvcCalc.Controllers
         [HttpPost]        
         public ActionResult Index(CalcViewModel calcViewModel)
         {
+<<<<<<< HEAD
             var a = "h";   
+=======
+            var a = "b";      
+>>>>>>> testmerge
             double res = 0;
             try
             {
